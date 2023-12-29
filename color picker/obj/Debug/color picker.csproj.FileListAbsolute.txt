@@ -1,0 +1,24 @@
+c:\users\nahoo\documents\visual studio 2017\Projects\color picker\color picker\bin\Debug\color picker.exe.config
+c:\users\nahoo\documents\visual studio 2017\Projects\color picker\color picker\bin\Debug\color picker.exe
+c:\users\nahoo\documents\visual studio 2017\Projects\color picker\color picker\bin\Debug\color picker.pdb
+c:\users\nahoo\documents\visual studio 2017\Projects\color picker\color picker\obj\Debug\color picker.csprojResolveAssemblyReference.cache
+c:\users\nahoo\documents\visual studio 2017\Projects\color picker\color picker\obj\Debug\color_picker.Form1.resources
+c:\users\nahoo\documents\visual studio 2017\Projects\color picker\color picker\obj\Debug\color_picker.Properties.Resources.resources
+c:\users\nahoo\documents\visual studio 2017\Projects\color picker\color picker\obj\Debug\color picker.csproj.GenerateResource.Cache
+c:\users\nahoo\documents\visual studio 2017\Projects\color picker\color picker\obj\Debug\color picker.exe
+c:\users\nahoo\documents\visual studio 2017\Projects\color picker\color picker\obj\Debug\color picker.pdb
+c:\users\nahoo\documents\visual studio 2017\Projects\color picker\color picker\obj\Debug\color_picker.Setting.resources
+c:\users\nahoo\documents\visual studio 2017\Projects\color picker\color picker\obj\Debug\color_picker.black.resources
+C:\Users\Nahoo\documents\visual studio 2017\Projects\color picker\color picker\obj\Debug\color_picker.Form2.resources
+C:\Users\NattyXO\Downloads\Visual Studio 2017\Projects\color picker\color picker\obj\Debug\color picker.csproj.AssemblyReference.cache
+C:\Users\NattyXO\Downloads\Visual Studio 2017\Projects\color picker\color picker\obj\Debug\color_picker.Form1.resources
+C:\Users\NattyXO\Downloads\Visual Studio 2017\Projects\color picker\color picker\obj\Debug\color_picker.Setting.resources
+C:\Users\NattyXO\Downloads\Visual Studio 2017\Projects\color picker\color picker\obj\Debug\color picker.csproj.GenerateResource.cache
+C:\Users\NattyXO\Downloads\Visual Studio 2017\Projects\color picker\color picker\obj\Debug\color picker.exe
+C:\Users\NattyXO\Downloads\Visual Studio 2017\Projects\color picker\color picker\obj\Debug\color picker.pdb
+C:\Users\NattyXO\Downloads\Visual Studio 2017\Projects\color picker\color picker\bin\Debug\color picker.exe.config
+C:\Users\NattyXO\Downloads\Visual Studio 2017\Projects\color picker\color picker\bin\Debug\color picker.exe
+C:\Users\NattyXO\Downloads\Visual Studio 2017\Projects\color picker\color picker\bin\Debug\color picker.pdb
+C:\Users\NattyXO\Downloads\Visual Studio 2017\Projects\color picker\color picker\obj\Debug\color_picker.Properties.Resources.resources
+C:\Users\NattyXO\Downloads\Visual Studio 2017\Projects\color picker\color picker\obj\Debug\color picker.csproj.CoreCompileInputs.cache
+C:\Users\NattyXO\Downloads\Visual Studio 2017\Projects\color picker\color picker\obj\Debug\color_picker.black_form.resources
