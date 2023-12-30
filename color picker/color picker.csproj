@@ -103,5 +103,11 @@
   <ItemGroup>
     <None Include="Resources\icons8-github-250 %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UI2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UI1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

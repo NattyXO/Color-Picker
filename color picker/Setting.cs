@@ -31,5 +31,10 @@ namespace color_picker
                 ss.Show();
             }
         }
+
+        private void Setting_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

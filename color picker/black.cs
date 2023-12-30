@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,17 @@ namespace color_picker
 {
     public partial class black_form : Form
     {
+
+        [DllImport("user32.dll")]
+        static extern bool GetCursorPos(ref Point lpPoint);
+
+        [DllImport("gdi32.dll", CharSet = CharSet.Auto, SetLastError = true, ExactSpelling = true)]
+        public static extern int BitBlt(IntPtr hDC, int x, int y, int nWidth, int nHeight, IntPtr hSrcDC, int xSrc, int ySrc, int dwRop);
+
+        Bitmap screenPixel = new Bitmap(1, 1, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+
+
+
         Dictionary<string, string> colorDictionary = new Dictionary<string, string>()
 {
     { "red", "#FF0000" },
@@ -197,151 +209,6 @@ namespace color_picker
                 lblColor2.Text = "Invalid Color";
             }
         }
-
-        private void txtColor3_TextChanged(object sender, EventArgs e)
-        {
-            // Get the entered hexadecimal color code
-            string hexColor = txtColor3.Text.Trim();
-
-            // Check if the entered value is a valid hexadecimal color code
-            if (System.Text.RegularExpressions.Regex.IsMatch(hexColor, "^#(?:[0-9a-fA-F]{3}){1,2}$"))
-            {
-                // Convert the hexadecimal color to a Color object
-                Color newColor = ColorTranslator.FromHtml(hexColor);
-
-                // Set the BackColor of pic1 to the entered color
-                pnl3.BackColor = newColor;
-
-                // Find the closest named color to the entered color
-                string colorName = "";
-                foreach (KnownColor knownColor in Enum.GetValues(typeof(KnownColor)))
-                {
-                    Color namedColor = Color.FromKnownColor(knownColor);
-                    if (namedColor.ToArgb() == newColor.ToArgb())
-                    {
-                        colorName = knownColor.ToString();
-                        break;
-                    }
-                }
-
-                // Display the closest named color in lblColor1
-                lblColor3.Text = colorName != "" ? colorName : "Custom Color";
-            }
-            else
-            {
-                // If the entered value is not a valid hexadecimal color code
-                lblColor3.Text = "Invalid Color";
-            }
-        }
-
-        private void txtColor4_TextChanged(object sender, EventArgs e)
-        {
-            // Get the entered hexadecimal color code
-            string hexColor = txtColor4.Text.Trim();
-
-            // Check if the entered value is a valid hexadecimal color code
-            if (System.Text.RegularExpressions.Regex.IsMatch(hexColor, "^#(?:[0-9a-fA-F]{3}){1,2}$"))
-            {
-                // Convert the hexadecimal color to a Color object
-                Color newColor = ColorTranslator.FromHtml(hexColor);
-
-                // Set the BackColor of pic1 to the entered color
-                pnl4.BackColor = newColor;
-
-                // Find the closest named color to the entered color
-                string colorName = "";
-                foreach (KnownColor knownColor in Enum.GetValues(typeof(KnownColor)))
-                {
-                    Color namedColor = Color.FromKnownColor(knownColor);
-                    if (namedColor.ToArgb() == newColor.ToArgb())
-                    {
-                        colorName = knownColor.ToString();
-                        break;
-                    }
-                }
-
-                // Display the closest named color in lblColor1
-                lblColor4.Text = colorName != "" ? colorName : "Custom Color";
-            }
-            else
-            {
-                // If the entered value is not a valid hexadecimal color code
-                lblColor4.Text = "Invalid Color";
-            }
-        }
-
-        private void txtColor5_TextChanged(object sender, EventArgs e)
-        {
-            // Get the entered hexadecimal color code
-            string hexColor = txtColor5.Text.Trim();
-
-            // Check if the entered value is a valid hexadecimal color code
-            if (System.Text.RegularExpressions.Regex.IsMatch(hexColor, "^#(?:[0-9a-fA-F]{3}){1,2}$"))
-            {
-                // Convert the hexadecimal color to a Color object
-                Color newColor = ColorTranslator.FromHtml(hexColor);
-
-                // Set the BackColor of pic1 to the entered color
-                pnl5.BackColor = newColor;
-
-                // Find the closest named color to the entered color
-                string colorName = "";
-                foreach (KnownColor knownColor in Enum.GetValues(typeof(KnownColor)))
-                {
-                    Color namedColor = Color.FromKnownColor(knownColor);
-                    if (namedColor.ToArgb() == newColor.ToArgb())
-                    {
-                        colorName = knownColor.ToString();
-                        break;
-                    }
-                }
-
-                // Display the closest named color in lblColor1
-                lblColor5.Text = colorName != "" ? colorName : "Custom Color";
-            }
-            else
-            {
-                // If the entered value is not a valid hexadecimal color code
-                lblColor5.Text = "Invalid Color";
-            }
-        }
-
-        private void txtColor6_TextChanged(object sender, EventArgs e)
-        {
-            // Get the entered hexadecimal color code
-            string hexColor = txtColor6.Text.Trim();
-
-            // Check if the entered value is a valid hexadecimal color code
-            if (System.Text.RegularExpressions.Regex.IsMatch(hexColor, "^#(?:[0-9a-fA-F]{3}){1,2}$"))
-            {
-                // Convert the hexadecimal color to a Color object
-                Color newColor = ColorTranslator.FromHtml(hexColor);
-
-                // Set the BackColor of pic1 to the entered color
-                pnl6.BackColor = newColor;
-
-                // Find the closest named color to the entered color
-                string colorName = "";
-                foreach (KnownColor knownColor in Enum.GetValues(typeof(KnownColor)))
-                {
-                    Color namedColor = Color.FromKnownColor(knownColor);
-                    if (namedColor.ToArgb() == newColor.ToArgb())
-                    {
-                        colorName = knownColor.ToString();
-                        break;
-                    }
-                }
-
-                // Display the closest named color in lblColor1
-                lblColor6.Text = colorName != "" ? colorName : "Custom Color";
-            }
-            else
-            {
-                // If the entered value is not a valid hexadecimal color code
-                lblColor6.Text = "Invalid Color";
-            }
-        }
-
         private void picSearch_Click(object sender, EventArgs e)
         {
             string userInput = txtSearch.Text.Trim().ToLower(); // Get user input in lowercase
@@ -438,6 +305,49 @@ namespace color_picker
                 // Call the color search method when Enter key is pressed
                 SearchColor();
             }
+        }
+        private Color GetColorAt(Point location)
+        {
+            using (Graphics gdest = Graphics.FromImage(screenPixel))
+            {
+                using (Graphics gsrc = Graphics.FromHwnd(IntPtr.Zero))
+                {
+                    IntPtr hSrcDC = gsrc.GetHdc();
+                    IntPtr hDC = gdest.GetHdc();
+                    int retval = BitBlt(hDC, 0, 0, 1, 1, hSrcDC, location.X, location.Y, (int)CopyPixelOperation.SourceCopy);
+                    gdest.ReleaseHdc();
+                    gsrc.ReleaseHdc();
+                }
+            }
+
+            return screenPixel.GetPixel(0, 0);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Point cursor = new Point();
+            GetCursorPos(ref cursor);
+
+            var c = GetColorAt(cursor);
+            pnlColorRealTime.BackColor = c;
+            lblHexaRealTime.Text = String.Format("#{0:X6}", c.ToArgb() & 0x00FFFFFF);
+            
+        }
+
+        private void black_form_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Check if Ctrl + C is pressed
+            if (e.Control && e.KeyCode == Keys.C)
+            {
+                Clipboard.SetText(lblHexaRealTime.Text); // Copy text to clipboard
+                e.SuppressKeyPress = true; // Suppress default copy behavior
+            }
+        }
+
+        private void black_form_Load(object sender, EventArgs e)
+        {
+            txtColor1_TextChanged(null, EventArgs.Empty);
+            txtColor2_TextChanged(null, EventArgs.Empty);
         }
     }
 }
