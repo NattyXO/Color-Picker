@@ -2,13 +2,14 @@
 
 ## Overview
 
-This Color Picker application allows users to explore various colors by entering their names or hexadecimal codes. The app displays the color and its name (if available) for quick reference.
+This is a simple color picker Windows Forms application developed in C#. It allows users to select colors through various means and provides real-time color detection from the screen.
 
 ## Features
 
 - **Color Dictionary:** Contains a collection of named colors with their corresponding hexadecimal codes.
 - **Color Search:** Users can search for a color by entering its name and view the associated hexadecimal code.
 - **Color Display:** Displays the entered hexadecimal code as a color.
+- **Real-time Color Detection:** Get the hexadecimal value of the color under the cursor.
 - **Additional Information:** Links to GitHub, About, and Refresh functionalities.
 
 ## Usage
@@ -17,6 +18,7 @@ This Color Picker application allows users to explore various colors by entering
    - Enter a color name in the search box and press Enter or click the search button.
    - If the color name exists in the dictionary, its hexadecimal code will be displayed.
    - If the color name is not found, a message will inform the user.
+   - Real-time Color Detection: The pnlColorRealTime panel displays the color under the cursor, and lblHexaRealTime shows its hexadecimal code.
 
 2. **Navigation:**
    - Click on "About" to view information about the application.
@@ -29,7 +31,7 @@ This Color Picker application allows users to explore various colors by entering
 ## Development Details
 
 - **Developed by:** Ahadu Tech
-- **Version:** v1.0
+- **Version:** v1.1
 - **Year:** 2023
 
 ## How to Run
